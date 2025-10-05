@@ -1,9 +1,16 @@
 const readline = require("readline").createInterface({
-    input: process.input,
+    input: process.stdin,
     output: process.stdout,
 })
 
-realine.question('Qual a sua linguagem preferida?', (language) => {
-    console.log(`A minha linguagem preferida é: ${language}`)
+readline.question('Qual a sua linguagem preferida?', (language) => {
+
+    if(language === 'Python'){
+        console.log('Isso nem é linguagem!')
+    }
+    else{
+        console.log(`A minha linguagem preferida é ${language}!`)
+    }
+
     readline.close() 
-})
+})  
